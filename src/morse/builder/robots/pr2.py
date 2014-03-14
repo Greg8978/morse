@@ -125,8 +125,8 @@ class LocalizedPR2(BasePR2):
 
 
         # Motion controller
-        self.motion = MotionXYW()
-        self.append(self.motion)
+        #self.motion = MotionXYW()
+        #self.append(self.motion)
 
         # (optionally) keyboard controller
         if with_keyboard:
@@ -145,7 +145,7 @@ class LocalizedPR2(BasePR2):
         BasePR2.add_interface(self, interface)
 
         if interface == "ros": 
-            self.motion.add_stream("ros", topic="/cmd_vel")
+            #self.motion.add_stream("ros", topic="/cmd_vel")
             self.pose.add_stream("ros", method="morse.middleware.ros.pose.TFPublisher")
 
 
